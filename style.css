@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/bg.jpg");
+    background-position: calc(50% + 17px) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top {
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+}
+
+.logo svg {
+    max-width: 230px;
+}
+
+.wheel {
+    z-index: 2;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 280px;
+}
+
+/*.wheel:after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    z-index: 2;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    background-image: url("./assets/ring.png");*/
+/*    background-position: center;*/
+/*    background-size: contain;*/
+/*    background-repeat: no-repeat;*/
+/*    max-width: 300px;*/
+/*    max-height: 300px;*/
+/*    width: 100vw;*/
+/*    height: 50vh;*/
+/*}*/
+
+.wheel__center {
+    position: relative;
+    background-image: url("./assets/ring.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 325px;
+    max-height: 325px;
+    width: 95vw;
+    height: 50vh;
+}
+
+.wheel__center::after {
+    content: '';
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("./assets/arrow.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 59px;
+    max-height: 59px;
+    width: 16vw;
+    height: 8vh;
+    z-index: 5;
+}
+
+.wheel__center:before {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("./assets/center.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 260px;
+    max-height: 260px;
+    width: 80vw;
+    height: 39vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.wheel__btn {
+    cursor: pointer;
+    max-width: 90px;
+    max-height: 90px;
+    width: 30vw;
+    height: 14vh;
+    background-image: url("./assets/btn.png");
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dog1 {
+    position: absolute;
+    background-image: url("./assets/dog1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -75%);
+    max-width: 160px;
+    max-height: 225px;
+    width: 43vw;
+    height: 36vh;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+}
+
+.item1 {
+    position: absolute;
+    max-width: 120px;
+    max-height: 120px;
+    width: 40vw;
+    height: 20vh;
+    background-image: url('./assets/item1.png');
+    transform: translateX(-10px);
+    top: -61%;
+    left: -3%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.item2 {
+    position: absolute;
+    max-width: 85px;
+    max-height: 120px;
+    width: 33vw;
+    height: 20vh;
+    transform: rotate(18deg);
+    top: -61%;
+    left: 76%;
+    background-image: url("./assets/item2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tablet1 {
+    position: absolute;
+    top: -20%;
+    left: -3%;
+    max-width: 150px;
+    max-height: 70px;
+    background-image: url("./assets/tablet.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 20vh;
+}
+
+
+.tablet2 {
+    position: absolute;
+    top: -20%;
+    right: -9px;
+    max-width: 150px;
+    max-height: 70px;
+    background-image: url("./assets/tablet.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40vw;
+    height: 20vh;
+}
+
+.footer {
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.footer__list {
+    display: flex;
+}
+
+.footer__list + .footer__list {
+    margin-top: 10px;
+}
+
+.footer__item {
+    border-radius: 10px;
+    background-color: #173701;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.footer__item + .footer__item {
+    margin-left: 15px;
+}
+
+
+@media (min-width: 991px) {
+    .top {
+        overflow: unset;
+    }
+
+    .dog1 {
+        left: 0;
+    }
+}
