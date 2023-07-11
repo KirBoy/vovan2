@@ -15,10 +15,6 @@ body {
 
 .main {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .top {
@@ -29,7 +25,7 @@ body {
     position: absolute;
     z-index: 5;
     left: 50%;
-    top: 20px;
+    top: 10px;
     transform: translateX(-50%);
     margin-bottom: 40px;
 }
@@ -44,7 +40,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 280px;
+    padding-top: 180px;
 }
 
 /*.wheel:after {*/
@@ -106,7 +102,7 @@ body {
     background-repeat: no-repeat;
     max-width: 260px;
     max-height: 260px;
-    width: 80vw;
+    width: 74vw;
     height: 39vh;
     transition: transform 0.3s ease-in-out;
 }
@@ -136,10 +132,10 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    transform: translate(-50%, -75%);
+    transform: translate(-50%, -55%);
     max-width: 160px;
     max-height: 225px;
-    width: 43vw;
+    width: 35vw;
     height: 36vh;
     left: 50%;
     top: 0;
@@ -147,6 +143,7 @@ body {
 }
 
 .item1 {
+    display: none;
     position: absolute;
     max-width: 120px;
     max-height: 120px;
@@ -162,6 +159,7 @@ body {
 }
 
 .item2 {
+    display: none;
     position: absolute;
     max-width: 85px;
     max-height: 120px;
@@ -178,8 +176,8 @@ body {
 
 .tablet1 {
     position: absolute;
-    top: -20%;
-    left: -3%;
+    top: -13%;
+    left: -5%;
     max-width: 150px;
     max-height: 70px;
     background-image: url("./assets/tablet.png");
@@ -193,8 +191,8 @@ body {
 
 .tablet2 {
     position: absolute;
-    top: -20%;
-    right: -9px;
+    top: -13%;
+    right: -5%;
     max-width: 150px;
     max-height: 70px;
     background-image: url("./assets/tablet.png");
@@ -207,8 +205,11 @@ body {
 
 .footer {
     max-width: 550px;
-    margin: 50px auto;
+    margin: 15px auto;
     padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__list {
@@ -228,6 +229,10 @@ body {
     align-items: center;
     justify-content: center;
     padding: 5px;
+}
+
+.footer__item svg {
+    max-height: 20px;
 }
 
 .footer__item + .footer__item {
