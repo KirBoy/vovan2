@@ -5,6 +5,8 @@ const tablet__text1 = document.querySelector('.tablet__text1');
 const tablet__text2 = document.querySelector('.tablet__text2');
 const tablet1__win = document.querySelector('.tablet1__win');
 const tablet2__win = document.querySelector('.tablet2__win');
+const modal = document.querySelector('.modal');
+const footer__item = document.querySelectorAll('.footer__item');
 
 btn.onclick = () => {
     if (wheel.classList.contains('spin1')) {
@@ -14,6 +16,8 @@ btn.onclick = () => {
         setTimeout(() => {
             btn.classList.remove('wheel__btn--disabled');
             tablet2__win.classList.add('win--visible')
+            modal.classList.add('modal--visible')
+            footer__item.forEach(el => el.classList.add('footer__item--color'))
         }, 5000)
         return;
     }
