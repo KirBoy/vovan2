@@ -1,5 +1,6 @@
 const btn = document.querySelector('.wheel__btn');
 const wheel = document.querySelector('.wheel__center');
+const wheel__animation = document.querySelector('.wheel__animation');
 const tablet__text1 = document.querySelector('.tablet__text1');
 const tablet__text2 = document.querySelector('.tablet__text2');
 const tablet1__win = document.querySelector('.tablet1__win');
@@ -16,7 +17,8 @@ btn.onclick = () => {
         }, 5000)
         return;
     }
-    wheel.classList.add('spin1');
+    wheel__animation.classList.add('wheel__animation--stop');
+    wheel.classList.add('spin1')
     btn.classList.add('wheel__btn--disabled');
     tablet__text1.classList.add('tablet__text--hidden');
     setTimeout(() => {

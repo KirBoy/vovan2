@@ -70,6 +70,41 @@ body {
     height: 50vh;
 }
 
+.wheel__animation {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("./assets/center.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 260px;
+    max-height: 260px;
+    width: 74vw;
+    height: 39vh;
+    transition: transform 5s cubic-bezier(0.5, 0.5, 0.55, 1.03);
+    animation: 5s a ease-in-out infinite;
+}
+
+@keyframes a {
+    0% {
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(20deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
+}
+
+.wheel__animation--stop {
+    display: none;
+    animation: paused;
+}
+
 .wheel__center::after {
     content: '';
     position: absolute;
@@ -102,15 +137,15 @@ body {
     max-height: 260px;
     width: 74vw;
     height: 39vh;
-    transition: transform 5s cubic-bezier(0.24, 0.04, 0.55, 1.03);
+    transition: transform 5s cubic-bezier(0.5, 0.5, 0.55, 1.03);
 }
 
 .spin1:before {
-    transform: translate(-50%, -50%) rotate(945deg);
+    transform: translate(-50%, -50%) rotate(2025deg);
 }
 
 .spin2:before {
-    transform: translate(-50%, -50%) rotate(1980deg);
+    transform: translate(-50%, -50%) rotate(4140deg);
 }
 
 .wheel__btn {
@@ -227,10 +262,10 @@ body {
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 900;
-    background-image: -webkit-gradient(linear,left bottom, left top,from(#FFC93F),to(#52FF00));
-    background-image: -moz-linear-gradient(bottom,#FFC93F,#52FF00);
-    background-image: linear-gradient(0deg,#FFC93F,#52FF00);
-    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#FFC93F), to(#52FF00));
+    background-image: -moz-linear-gradient(bottom, #FFC93F, #52FF00);
+    background-image: linear-gradient(0deg, #FFC93F, #52FF00);
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 13px 12px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -325,7 +360,7 @@ body {
     }
 
     .logo {
-        top: 25px;
+        top: 20px;
     }
 
     .logo svg {
@@ -336,12 +371,19 @@ body {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 15%;
+        bottom: 20%;
     }
 
     .wheel__center {
         max-width: 550px;
         max-height: 550px;
+        width: 70vw;
+        height: 70vh;
+    }
+
+    .wheel__animation {
+        max-width: 420px;
+        max-height: 420px;
         width: 70vw;
         height: 70vh;
     }
@@ -427,6 +469,10 @@ body {
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
+    }
+
+    .footer {
+        padding-bottom: 20px;
     }
 
     .footer__item {
