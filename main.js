@@ -7,6 +7,8 @@ const tablet1__win = document.querySelector('.tablet1__win');
 const tablet2__win = document.querySelector('.tablet2__win');
 const modal = document.querySelector('.modal');
 const footer__item = document.querySelectorAll('.footer__item');
+const logo__text = document.querySelectorAll('.logo__text');
+const logo__casino = document.querySelector('.logo__casino');
 const body = document.querySelector('body');
 
 btn.onclick = () => {
@@ -19,8 +21,10 @@ btn.onclick = () => {
             tablet2__win.classList.add('win--visible')
             modal.classList.add('modal--visible')
             footer__item.forEach(el => el.classList.add('footer__item--color'));
+            logo__casino.classList.add('logo__casino--color')
+            logo__text.forEach(el => el.classList.add('logo__text--color'));
             body.style.overflow = 'hidden'
-        }, 5000)
+        }, 4000)
         return;
     }
     wheel__animation.classList.add('wheel__animation--stop');
@@ -30,5 +34,5 @@ btn.onclick = () => {
     setTimeout(() => {
         btn.classList.remove('wheel__btn--disabled');
         tablet1__win.classList.add('win--visible')
-    }, 5000)
+    }, 4000)
 }
