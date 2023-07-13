@@ -276,7 +276,7 @@
     z-index: 3;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(0);
     background-image: url("./assets/center.png");
     background-position: center;
     background-size: contain;
