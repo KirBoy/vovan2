@@ -16,6 +16,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: auto;
+    background-color: #4f9030;
 }
 
 .main {
