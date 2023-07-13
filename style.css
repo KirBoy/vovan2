@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     color: #fff;
@@ -17,6 +17,11 @@ body {
     background-repeat: no-repeat;
     overflow: auto;
     background-color: #4f9030;
+    transition: background 0.5s linear 0.5s;
+}
+
+.body--bg {
+    background-image: url("./assets/bgNight.jpg");
 }
 
 .main {

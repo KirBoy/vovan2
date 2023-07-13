@@ -9,7 +9,7 @@ const modal = document.querySelector('.modal');
 const footer__item = document.querySelectorAll('.footer__item');
 const logo__text = document.querySelectorAll('.logo__text');
 const logo__casino = document.querySelector('.logo__casino');
-const body = document.querySelector('body');
+const body = document.querySelector('.body');
 
 btn.onclick = () => {
     if (wheel.classList.contains('spin1')) {
@@ -24,6 +24,7 @@ btn.onclick = () => {
             logo__casino.classList.add('logo__casino--color')
             logo__text.forEach(el => el.classList.add('logo__text--color'));
             body.style.overflow = 'hidden'
+            body.classList.add('body--bg');
         }, 4000)
         return;
     }
