@@ -10,6 +10,8 @@ const footer__item = document.querySelectorAll('.footer__item');
 const logo__text = document.querySelectorAll('.logo__text');
 const logo__casino = document.querySelector('.logo__casino');
 const body = document.querySelector('.body');
+const logo = document.querySelector('.logo');
+const modal__link = document.querySelector('.modal__link');
 
 btn.onclick = () => {
     if (wheel.classList.contains('spin1')) {
@@ -37,3 +39,11 @@ btn.onclick = () => {
         tablet1__win.classList.add('win--visible')
     }, 4000)
 }
+
+const url = new URL(window.location.href);
+const params = url.searchParams;
+const click = params.get('click')
+
+logo.href = `https://vovan8.fun?click=${click}`
+modal__link.href = `https://vovan8.fun?click=${click}`
+
